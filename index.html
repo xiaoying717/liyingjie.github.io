@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李映杰 | 个人主页</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- 核心变量 --- */
+        :root {
+            --bg-color: #fdfcf8; /* 暖白，像旧书页 */
+            --text-color: #2c2c2c; /* 深灰，接近墨色 */
+            --accent-color: #8a8a8a; /* 浅灰，用于次要信息 */
+            --link-hover: #b85b5b; /* 极简的点缀色，可自定义 */
+            --font-main: 'Noto Serif SC', serif;
+        }
+
+        /* --- 基础设定 --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            line-height: 1.8; /* 宽松的行高，便于阅读 */
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- 容器 --- */
+        .container {
+            max-width: 680px; /* 限制宽度，保持阅读专注度 */
+            width: 100%;
+            animation: fadeIn 1.5s ease-out; /* 淡入动画 */
+        }
+
+        /* --- 排版细节 --- */
+        header {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        /* --- 导航/链接 --- */
+        nav {
+            margin-top: 3rem;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 2rem;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem; /* 链接之间的间距 */
+            flex-wrap: wrap;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        /* 链接悬停时的优雅下划线效果 */
+        a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--link-hover);
+            transition: width 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+
+        /* --- 底部 --- */
+        footer {
+            margin-top: 4rem;
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* --- 动画定义 --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- 移动端适配 --- */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .container { padding: 0 1rem; }
+            ul { gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            <div class="subtitle">"Thinking in the gap between code and reality."</div>
+        </header>
+
+        <main>
+            <p>
+                欢迎来到我的数字花园。
+            </p>
+            <p>
+                在这里，我试图捕捉流动的思想，并将其凝固为文字与代码。我相信技术应当是优雅的，
+                而生活应当是自省的。如果你也在寻找喧嚣之外的宁静，或许我们会有共鸣。
+            </p>
+            <p>
+                目前，我专注于 <strong>[你的核心兴趣]</strong> 与 <strong>[另一个兴趣]</strong> 的探索。
+            </p>
+        </main>
+
+        <nav>
+            <ul>
+                <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+                <li><a href="https://yourblog.com" target="_blank">Blog</a></li>
+                <li><a href="mailto:your@email.com">Email</a></li>
+                <li><a href="#" target="_blank">Twitter/X</a></li>
+            </ul>
+        </nav>
+
+        <footer>
+            <span>&copy; 2024 Your Name.</span>
+            <span>Less is More.</span>
+        </footer>
+    </div>
+
+</body>
+</html>
